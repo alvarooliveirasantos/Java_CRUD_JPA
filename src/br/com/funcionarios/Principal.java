@@ -2,14 +2,17 @@ package br.com.funcionarios;
 
 import java.util.Scanner;
 
+import javax.persistence.EntityManager;
+
 import org.omg.CORBA.portable.ApplicationException;
 
 import br.com.operacoes.Cadastro;
+import br.com.operacoes.JPAUtil;
 
 public class Principal {
 
 	public static void main(String[] args) {
-		
+	EntityManager emf = JPAUtil.getEntityManager();	
 	/*Cargo cargo = new Cargo();
 	cargo.nome="Programador";
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("oracle");
